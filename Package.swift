@@ -27,5 +27,6 @@ let package = Package(
         .testTarget(
             name: "rabbitmq-objc-clientTests",
             dependencies: ["rabbitmq-objc-client"]),
-    ]
+    ],
+    path: "RMQClient"
 )
