@@ -23,11 +23,11 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
             name: "rabbitmq-objc-client",
-            dependencies: []),
-            path: "RMQClient"
+            dependencies: [],
+            path: "RMQClient")
         .testTarget(
             name: "rabbitmq-objc-clientTests",
-            dependencies: ["rabbitmq-objc-client"]),
-            path: "RMQClientTests"
+            dependencies: ["rabbitmq-objc-client"],
+            path: "RMQClientTests")
     ],
 )
