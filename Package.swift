@@ -21,13 +21,19 @@ let package = Package(
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
+
+// name:dependencies:path:exclude:sources:resources:publicHeadersPath:cSettings:cxxSettings:swiftSettings:linkerSettings:plugins:
+
         .target(
             name: "rabbitmq-objc-client",
-            dependencies: [],
-            path: "RMQClient"),
+            dependencies: ["JKVValue", "CocoaAsyncSocket"],
+            path: "RMQClient",
+            publicHeadersPath: "."
+        ),
         .testTarget(
             name: "rabbitmq-objc-clientTests",
             dependencies: ["rabbitmq-objc-client"],
-            path: "RMQClientTests")
-    ],
+            path: "RMQClientTests"
+        ),
+    ]
 )
